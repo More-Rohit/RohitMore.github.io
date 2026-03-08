@@ -1,0 +1,442 @@
+/* ==========================================
+   GLOBAL STYLES
+========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background-color: #1a1a2e;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #e94560;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #ccc;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #e94560;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+.btn-primary {
+  display: inline-block;
+  background-color: #e94560;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
+
+.btn-primary:hover {
+  background-color: #c73652;
+}
+
+.btn-secondary {
+  display: inline-block;
+  border: 2px solid #e94560;
+  color: #e94560;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s;
+  margin-top: 15px;
+  margin-left: 12px;
+}
+
+.btn-secondary:hover {
+  background-color: #e94560;
+  color: #fff;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+#hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+#hero .tagline {
+  font-size: 1.2rem;
+  color: #e94560;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+#hero .bio {
+  font-size: 1rem;
+  color: #aaa;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-buttons {
+  margin-top: 10px;
+}
+
+/* ==========================================
+   SKILLS SECTION
+========================================== */
+#skills {
+  padding: 70px 60px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1a1a2e;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  background-color: #e94560;
+  color: #fff;
+}
+
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+#contact {
+  padding: 70px 60px;
+  text-align: center;
+  background-color: #1a1a2e;
+  color: #fff;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#contact p {
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #555;
+  font-size: 0.85rem;
+}
+
+/* ==========================================
+   RESUME PAGE
+========================================== */
+#resume {
+  max-width: 860px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.resume-header h1 {
+  font-size: 2.5rem;
+  color: #1a1a2e;
+}
+
+.resume-header p {
+  color: #666;
+  margin: 10px 0;
+}
+
+.resume-header a {
+  color: #e94560;
+}
+
+.resume-block {
+  margin-bottom: 45px;
+  border-left: 4px solid #e94560;
+  padding-left: 20px;
+}
+
+.resume-block h2 {
+  font-size: 1.4rem;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.resume-item {
+  margin-bottom: 25px;
+}
+
+.resume-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume-item-header h3 {
+  font-size: 1.1rem;
+  color: #1a1a2e;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.company {
+  color: #e94560;
+  font-size: 0.95rem;
+  margin: 4px 0 10px;
+}
+
+.resume-item ul {
+  padding-left: 20px;
+  color: #444;
+}
+
+.resume-item ul li {
+  margin-bottom: 6px;
+}
+
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.skills-table tr {
+  border-bottom: 1px solid #eee;
+}
+
+.skills-table td {
+  padding: 10px 8px;
+  color: #444;
+  vertical-align: top;
+}
+
+.skills-table td:first-child {
+  width: 160px;
+  color: #1a1a2e;
+}
+
+/* ==========================================
+   BLOG PAGE
+========================================== */
+#blog-header {
+  text-align: center;
+  padding: 70px 20px 30px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+}
+
+#blog-header h1 {
+  font-size: 2.5rem;
+}
+
+#blog-header p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+#blog-list {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  transition: transform 0.2s;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+}
+
+.blog-card h2 {
+  font-size: 1.3rem;
+  margin: 8px 0 5px;
+  color: #1a1a2e;
+}
+
+.blog-card h2 a:hover {
+  color: #e94560;
+}
+
+.blog-tag {
+  background-color: #e94560;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.blog-meta {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.blog-excerpt {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  color: #e94560;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   BLOG POST PAGE
+========================================== */
+#blog-post {
+  max-width: 760px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+.post-header h1 {
+  font-size: 2.2rem;
+  color: #1a1a2e;
+  margin: 10px 0 5px;
+}
+
+.post-body h2 {
+  font-size: 1.4rem;
+  color: #1a1a2e;
+  margin: 35px 0 10px;
+}
+
+.post-body p {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.post-body pre {
+  background-color: #1a1a2e;
+  color: #f8f8f2;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+.post-body code {
+  font-family: 'Courier New', monospace;
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #skills {
+    padding: 50px 20px;
+  }
+
+  .resume-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
